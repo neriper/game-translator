@@ -30,10 +30,9 @@ class WindowTextAreaSelector:
         self.window.overrideredirect(True)  # Убираем рамки окна
         self.window.geometry(f'{self.config["SCREEN"]["WIDTH"]}x{self.config["SCREEN"]["HEIGHT"]}+0+0')
 
-        print(f"SCREEN: {self.window.winfo_screenwidth()}, {self.window.winfo_screenheight()}")
-
         self.window.attributes('-alpha', 0.2)
         self.window.attributes('-topmost', True)
+        self.window.state('zoomed')
         self.window.config(cursor='cross')
         self.canvas = Canvas(self.window, highlightthickness=0)
         self.canvas.pack(fill=tk.BOTH, expand=True)

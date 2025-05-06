@@ -11,14 +11,15 @@ class MainApp:
         self.area_selector = None
 
         self.root = tk.Tk()
+        self.root.geometry(f'{config["SCREEN"]["WIDTH"]}x{config["SCREEN"]["HEIGHT"]}+0+0')
         self.root.withdraw()
 
         self.area_selector = WindowTextAreaSelector(self.root, config)
         self.overlay_window = WindowOverlay(self.root)
         self.area_selector.overlay_window_class = self.overlay_window
 
-        keyboard.add_hotkey('ctrl+1', self.select_area)
-        keyboard.add_hotkey('ctrl+2', self.close_overlay)
+        keyboard.add_hotkey(config["SCREENSHOOT"]["CREATE"], self.select_area)
+        keyboard.add_hotkey(config["SCREENSHOOT"]["CLOSE"], self.close_overlay)
 
 
     def select_area(self):
