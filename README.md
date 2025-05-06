@@ -1,1 +1,29 @@
 # game-translator
+
+## Установка зависимостей
+- python 3.11 (установить с установленной галкой на опции **Tcl/Tk**)
+
+## Установка
+1. Выполнить клонирование кода и установку зависимостей
+```bash
+git clone https://github.com/neriper/game-translator.git
+cd game-translator
+py -m venv venv
+source venv/Scripts/activate
+pip install -r requirements.txt
+```
+2. В файле [config.ini](config.ini) указать свое разрешение монитора в блоке SCREEN
+
+## Запуск
+Выполнить команду в консоли из папки game-translator
+
+### WINDOWS
+```bash
+py main.py
+```
+
+## Использование
+P.S. есть ошибка с первым выделением, со второго раза норм!
+
+CTRL+1 - запускает выбор области перевода
+CTRL+2 - закрыть область с переводом либо закрыть по клику на крест в углу

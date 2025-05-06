@@ -4,6 +4,8 @@ import tkinter as tk
 from tkinter import Canvas
 from PIL import Image
 from mss import mss
+
+from utils.translate.argostranslate import argos_translate
 from utils.translate.google import google_translate
 
 
@@ -91,6 +93,8 @@ class WindowTextAreaSelector:
             match self.config["TRANSLATE_SYSTEM"]["SYSTEM"]:
                 case "1":
                     text = google_translate(text_from_image)
+                case "2":
+                    text = argos_translate(text_from_image)
                 case _:
                     text = "DONT SET config TRANSLATE_SYSTEM SYSTEM"
 
