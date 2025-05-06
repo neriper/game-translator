@@ -19,7 +19,7 @@ pip install -r requirements.txt
 
 ### WINDOWS
 ```bash
-py main.py
+ venv/Scripts/python main.py
 ```
 
 ## Принцип работы / Использование
