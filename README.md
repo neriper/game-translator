@@ -13,7 +13,8 @@ py -m venv .venv
 .venv\Scripts\pip install uv
 .venv/Scripts/uv pip install -r requirements.txt
 ```
-2. В файле [config.ini](config.ini) указать свое разрешение монитора в блоке SCREEN
+2. В файле [config.ini](config.ini) в блоке SCREEN указать свое разрешение монитора 
+3. В файле [config.ini](config.ini) в блоке SCREENSHOOT указать в параметре TESSERACT_OCR путь до tesseract.exe
 
 ## Запуск
 Выполнить команду в консоли из папки game-translator

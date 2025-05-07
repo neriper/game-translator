@@ -22,6 +22,8 @@ class WindowTextAreaSelector:
         self.coords_overlay = {}
         self.screenshoot_name = self.config["SCREENSHOOT"]["NAME"]
 
+        pytesseract.pytesseract.tesseract_cmd = rf'{self.config["SCREENSHOOT"]["TESSERACT_OCR"]}'
+
     def setup_window(self):
         if self.is_selection_active:
             return
