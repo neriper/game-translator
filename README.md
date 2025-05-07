@@ -1,7 +1,7 @@
 # game-translator
 
 ## Установка зависимостей
-- python >= 3.11 (установить с установленной галкой на опции **Tcl/Tk**)
+- python >= 3.11 < 3.12 (установить с установленной галкой на опции **Tcl/Tk**)
 - установить https://github.com/UB-Mannheim/tesseract/wiki (нужен для распознавания текста)
 
 ## Установка
@@ -10,8 +10,10 @@
 git clone https://github.com/neriper/game-translator.git
 cd game-translator
 py -m venv venv
-source venv/Scripts/activate
-pip install -r requirements.txt
+venv\Scripts\activate.bat
+venv\Scripts\pip install uv
+venv/Scripts/uv venv
+venv/Scripts/uv pip install -r requirements.txt
 ```
 2. В файле [config.ini](config.ini) указать свое разрешение монитора в блоке SCREEN
 
