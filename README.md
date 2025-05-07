@@ -9,11 +9,9 @@
 ```bash
 git clone https://github.com/neriper/game-translator.git
 cd game-translator
-py -m venv venv
-venv\Scripts\activate.bat
-venv\Scripts\pip install uv
-venv/Scripts/uv venv
-venv/Scripts/uv pip install -r requirements.txt
+py -m venv .venv
+.venv\Scripts\pip install uv
+.venv/Scripts/uv pip install -r requirements.txt
 ```
 2. В файле [config.ini](config.ini) указать свое разрешение монитора в блоке SCREEN
 
@@ -22,7 +20,7 @@ venv/Scripts/uv pip install -r requirements.txt
 
 ### WINDOWS
 ```bash
- venv/Scripts/python main.py
+ .venv/Scripts/python main.py
 ```
 
 ## Принцип работы / Использование
